@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "ADHD SS Extension",
+  "version": "1.0",
+  "description": "Plays Subway Surfers on loop in Google Chrome tabs.",
+  "permissions": ["activeTab"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["subwaysurfersac.mp4"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}

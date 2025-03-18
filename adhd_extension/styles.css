@@ -1,0 +1,31 @@
+.video-container {
+  position: fixed;
+  top: 10px; /* Initial distance from the top of the screen */
+  left: 10px; /* Initial distance from the left of the screen */
+  width: 300px; /* Initial width of the video container */
+  height: 500px; /* Initial height of the video container (vertical rectangle) */
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden; /* Ensures the video respects the rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow */
+  z-index: 1000; /* Ensures the video stays on top of other content */
+  cursor: grab; /* Changes cursor to indicate draggability */
+  resize: none; /* Disable default resize behavior */
+  border: 10px solid black; /* Thin black border to mimic a phone */
+}
+
+video {
+  width: 100%; /* Makes the video fill the container width */
+  height: 100%; /* Makes the video fill the container height */
+  object-fit: cover; /* Ensures the video fills the container without stretching */
+}
+
+.resize-handle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: se-resize; /* Indicates the resize handle */
+  border-radius: 2px;
+}
